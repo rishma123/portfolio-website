@@ -1,0 +1,52 @@
+<div class="home">
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1 class="hero-title">{{ personalInfo.name }}</h1>
+      <p class="hero-subtitle">{{ personalInfo.title }}</p>
+      <p class="hero-bio">{{ personalInfo.bio }}</p>
+
+      <!-- CTA Buttons -->
+      <div class="hero-buttons">
+        <button routerLink="/projects" class="btn-primary">View Projects</button>
+        <a [href]="'mailto:' + personalInfo.email" class="btn-secondary">Get in Touch</a>
+      </div>
+
+      <!-- Social Links -->
+      <div class="hero-social">
+        <a [href]="personalInfo.github" target="_blank" class="social-link">GitHub</a>
+        <a [href]="personalInfo.linkedin" target="_blank" class="social-link">LinkedIn</a>
+        <a [href]="'mailto:' + personalInfo.email" class="social-link">Email</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section class="skills-section">
+    <div class="skills-container">
+      <h2 class="section-title">Skills & Technologies</h2>
+
+      <div class="skills-grid">
+        @for (skillGroup of skills; track skillGroup.category) {
+          <div class="skill-card">
+            <h3 class="skill-category">{{ skillGroup.category }}</h3>
+            <div class="skill-items">
+              @for (skill of skillGroup.items; track skill) {
+                <span class="skill-badge">{{ skill }}</span>
+              }
+            </div>
+          </div>
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- Call to Action -->
+  <section class="cta-section">
+    <div class="cta-content">
+      <h2>Ready to see my work?</h2>
+      <p>Check out my latest projects and let's build something amazing together.</p>
+      <a routerLink="/projects" class="btn-primary">Explore Projects</a>
+    </div>
+  </section>
+</div>

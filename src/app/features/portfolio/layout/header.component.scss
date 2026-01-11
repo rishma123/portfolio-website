@@ -1,0 +1,78 @@
+// Header Component Styles
+
+$primary: #4f46e5;
+$text-dark: #1e293b;
+$text-light: #64748b;
+
+.header {
+  background: white;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+.header-nav {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-logo {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: $text-dark;
+}
+
+.header-links {
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-link {
+  color: $text-light;
+  padding-bottom: 0.25rem;
+  border-bottom: 2px solid transparent;
+  transition: all 0.3s ease;
+
+  &:hover {
+    color: $text-dark;
+  }
+
+  &.active {
+    border-bottom-color: $primary;
+    color: $primary;
+  }
+}
+
+.github-link {
+  color: $text-light;
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: $text-dark;
+  }
+
+  svg {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .header-links {
+    gap: 1rem;
+    font-size: 0.9rem;
+  }
+
+  .header-logo {
+    font-size: 1.1rem;
+  }
+}
+
