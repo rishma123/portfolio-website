@@ -41,7 +41,7 @@ export const PROJECTS: Project[] = [
     description: 'A modern Angular 17 application that helps users track meals and daily habits with pattern recognition. Features include meal logging, calorie tracking, habit monitoring, and intelligent insights. Built with Angular Signals and responsive design using in-memory state management.',
     technologies: ['Angular 17', 'TypeScript', 'Signals', 'SCSS', 'Jasmine', 'Karma'],
     githubLink: 'https://github.com/rishma123/smart-meal-tracker',
-    liveLink: 'https://rishma-meal-tracker.netlify.app'
+    liveLink: 'https://rishma123.github.io/smart-meal-tracker'
   },
   {
     id: '2',
@@ -49,7 +49,7 @@ export const PROJECTS: Project[] = [
     description: 'A comprehensive Angular 17 job tracking application with CRUD operations, dashboard statistics, and interview management. Features include job search filtering, data persistence via localStorage, responsive design, and complete state management using modern Angular patterns.',
     technologies: ['Angular 17', 'TypeScript', 'Signals', 'SCSS', 'localStorage', 'Jasmine', 'Karma'],
     githubLink: 'https://github.com/rishma123/job-application-tracker',
-    liveLink: 'https://rishma-job-tracker.netlify.app'
+    liveLink: 'https://rishma123.github.io/job-application-tracker'
   }
 ];
 
@@ -57,7 +57,7 @@ export const EXPERIENCE = [
   {
     title: 'Frontend Developer (Working Student)',
     company: 'EnBW',
-    duration: '2024 - Present',
+    duration: '2024 - 2026',
     description: 'Working on Angular-based UI components with modern frontend patterns, including Signals and design-system-style components.'
   }
 ];
