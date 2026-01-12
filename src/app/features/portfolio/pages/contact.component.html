@@ -2,57 +2,52 @@
   <div class="contact-container">
     <div class="section-title-wrapper">
       <h1 class="section-title">Get In Touch</h1>
-      <p class="section-subtitle">Let's connect and collaborate</p>
+      <p class="section-subtitle">Let's connect and collaborate on amazing projects</p>
     </div>
 
     <div class="contact-content">
       <div class="contact-info">
         <div class="contact-card">
-          <div class="contact-icon email-icon">
-            <span>✉️</span>
-          </div>
+          <div class="contact-icon email-icon">✉️</div>
           <h3 class="contact-label">Email</h3>
-          <a [href]="'mailto:' + personalInfo.email" class="contact-link">
-            {{ personalInfo.email }}
+          <a [href]="'mailto:' + personalInfo.email" class="contact-button">
+            Send Email
           </a>
+          <p class="contact-hint">{{ personalInfo.email }}</p>
         </div>
 
         <div class="contact-card">
-          <div class="contact-icon github-icon">
-            <span>🔗</span>
-          </div>
+          <div class="contact-icon github-icon">🔗</div>
           <h3 class="contact-label">GitHub</h3>
-          <a [href]="personalInfo.github" target="_blank" rel="noopener noreferrer" class="contact-link">
-            github.com/{{ personalInfo.name.toLowerCase().replace(' ', '') }}
+          <a [href]="personalInfo.github" target="_blank" rel="noopener noreferrer" class="contact-button">
+            View Profile
           </a>
+          <p class="contact-hint">rishma123</p>
         </div>
 
         <div class="contact-card">
-          <div class="contact-icon linkedin-icon">
-            <span>💼</span>
-          </div>
+          <div class="contact-icon linkedin-icon">💼</div>
           <h3 class="contact-label">LinkedIn</h3>
-          <a [href]="personalInfo.linkedin" target="_blank" rel="noopener noreferrer" class="contact-link">
-            LinkedIn Profile
+          <a [href]="personalInfo.linkedin" target="_blank" rel="noopener noreferrer" class="contact-button">
+            Connect Now
           </a>
+          <p class="contact-hint">@rishma97</p>
         </div>
 
         <div class="contact-card">
-          <div class="contact-icon location-icon">
-            <span>📍</span>
-          </div>
+          <div class="contact-icon location-icon">📍</div>
           <h3 class="contact-label">Location</h3>
-          <p class="contact-text">{{ personalInfo.location }}</p>
+          <p class="contact-hint">{{ personalInfo.location }}</p>
         </div>
       </div>
 
       <div class="contact-cta">
-        <h2 class="cta-title">Ready to collaborate?</h2>
+        <h2 class="cta-title">Let's Create Something Great</h2>
         <p class="cta-description">
-          I'm always interested in hearing about new projects and opportunities.
+          I'm always excited to work on innovative projects and help bring your ideas to life. Whether you have a question or just want to say hello, feel free to reach out!
         </p>
         <a [href]="'mailto:' + personalInfo.email" class="cta-button">
-          Send me an email
+          Start a Conversation
         </a>
       </div>
     </div>

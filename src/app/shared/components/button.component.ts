@@ -14,10 +14,46 @@ import { Component, input } from '@angular/core';
   standalone: true,
   styles: [`
     button {
-      @apply px-6 py-3 rounded-lg font-medium transition-all;
+      padding: 0.75rem 1.5rem;
+      border-radius: 8px;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      border: none;
+      cursor: pointer;
+      font-size: 0.95rem;
     }
+
+    .btn-primary {
+      background: linear-gradient(135deg, #4f46e5 0%, #6366f1 100%);
+      color: white;
+      box-shadow: 0 4px 12px rgba(79, 70, 229, 0.25);
+    }
+
+    .btn-primary:hover:not(:disabled) {
+      background: linear-gradient(135deg, #4338ca 0%, #4f46e5 100%);
+      box-shadow: 0 8px 20px rgba(79, 70, 229, 0.4);
+      transform: translateY(-2px);
+    }
+
+    .btn-primary:active:not(:disabled) {
+      transform: translateY(0);
+    }
+
+    .btn-secondary {
+      background: #e2e8f0;
+      color: #1e293b;
+      border: 2px solid transparent;
+    }
+
+    .btn-secondary:hover:not(:disabled) {
+      background: #4f46e5;
+      color: white;
+      border-color: #4f46e5;
+    }
+
     button:disabled {
-      @apply opacity-50 cursor-not-allowed;
+      opacity: 0.6;
+      cursor: not-allowed;
     }
   `]
 })
@@ -26,11 +62,9 @@ export class ButtonComponent {
   disabled = input(false);
   variant = input<'primary' | 'secondary'>('primary');
 
-  buttonClass = () => {
-    const baseClass = 'px-6 py-3 rounded-lg font-medium transition-all';
-    const variantClass = this.variant() === 'primary'
-      ? 'bg-indigo-600 text-white hover:bg-indigo-700 disabled:bg-indigo-400'
-      : 'bg-slate-200 text-slate-800 hover:bg-slate-300 disabled:bg-slate-100';
+  buttonClass() {
+    const baseClass = 'btn';
+    const variantClass = this.variant() === 'primary' ? 'btn-primary' : 'btn-secondary';
     return `${baseClass} ${variantClass}`;
-  };
+  }
 }

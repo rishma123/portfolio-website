@@ -38,16 +38,16 @@ export const PROJECTS: Project[] = [
   {
     id: '1',
     title: 'Smart Meal & Habit Tracker',
-    description: 'A frontend-only Angular application that helps users track meals and daily habits while identifying patterns such as frequent snacking or low-protein days. The app uses derived state and configuration-driven rules to provide meaningful, non-judgmental UI feedback.',
-    technologies: ['Angular', 'TypeScript', 'Signals', 'Tailwind CSS', 'Fetch API', 'Vitest', 'Playwright'],
+    description: 'A modern Angular 17 application that helps users track meals and daily habits with pattern recognition. Features include meal logging, calorie tracking, habit monitoring, and intelligent insights. Built with Angular Signals and responsive design using in-memory state management.',
+    technologies: ['Angular 17', 'TypeScript', 'Signals', 'SCSS', 'Jasmine', 'Karma'],
     githubLink: 'https://github.com/rishma123/smart-meal-tracker',
     liveLink: 'https://rishma-meal-tracker.netlify.app'
   },
   {
     id: '2',
     title: 'Job Application Tracker',
-    description: 'A frontend application that helps users manage and track job applications, including applied, interview, rejected, and offer stages. Includes filtering, search, and derived statistics to visualize job search progress.',
-    technologies: ['Angular', 'TypeScript', 'Signals', 'REST API', 'GraphQL', 'Tailwind CSS', 'Vitest', 'Playwright'],
+    description: 'A comprehensive Angular 17 job tracking application with CRUD operations, dashboard statistics, and interview management. Features include job search filtering, data persistence via localStorage, responsive design, and complete state management using modern Angular patterns.',
+    technologies: ['Angular 17', 'TypeScript', 'Signals', 'SCSS', 'localStorage', 'Jasmine', 'Karma'],
     githubLink: 'https://github.com/rishma123/job-application-tracker',
     liveLink: 'https://rishma-job-tracker.netlify.app'
   }
